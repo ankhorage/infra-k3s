@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@ankhorage/k3s",
+      "name": "@ankhorage/infra-k3s",
       "dependencies": {
         "@ankhorage/contracts": "^19.4.0",
         "@ankhorage/kubernetes": "^0.8.0",
