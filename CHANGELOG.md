@@ -1,5 +1,11 @@
 # @ankhorage/k3s
 
+## 0.4.3
+
+### Patch Changes
+
+- 5820e6b: Publish releases through npm Trusted Publishing instead of a bootstrap token.
+
 ## 0.4.2
 
 ### Patch Changes
