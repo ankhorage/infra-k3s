@@ -14,7 +14,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.4.3",
+      "value": "v0.4.4",
       "color": "cb3837"
     },
     {
@@ -1400,7 +1400,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 22,
+        "line": 26,
         "column": 1
       }
     },
@@ -1409,7 +1409,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 37,
+        "line": 41,
         "column": 1
       }
     },
@@ -1418,7 +1418,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 57,
+        "line": 61,
         "column": 1
       }
     },
@@ -1427,7 +1427,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 80,
+        "line": 84,
         "column": 1
       }
     },
@@ -1436,7 +1436,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 100,
+        "line": 104,
         "column": 1
       }
     },
@@ -1445,7 +1445,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 121,
+        "line": 125,
         "column": 1
       }
     },
@@ -1454,7 +1454,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 157,
+        "line": 161,
         "column": 1
       }
     },
@@ -1463,7 +1463,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 177,
+        "line": 181,
         "column": 1
       }
     },
@@ -1472,7 +1472,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 207,
+        "line": 211,
         "column": 1
       }
     },
@@ -1481,7 +1481,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 224,
+        "line": 228,
         "column": 1
       }
     },
@@ -1490,7 +1490,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 241,
+        "line": 245,
         "column": 1
       }
     },
@@ -1499,7 +1499,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 248,
+        "line": 252,
         "column": 1
       }
     },
@@ -1508,7 +1508,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 259,
+        "line": 263,
         "column": 1
       }
     },
@@ -1517,7 +1517,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/cluster-runtime/adapters/operateK3sCliAsync.ts",
-        "line": 264,
+        "line": 268,
         "column": 1
       }
     },
@@ -1949,7 +1949,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/k3sRuntime.test.ts",
-        "line": 172,
+        "line": 176,
         "column": 1
       }
     },
@@ -1958,7 +1958,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/k3sRuntime.test.ts",
-        "line": 203,
+        "line": 209,
         "column": 1
       }
     },
