@@ -1,6 +1,6 @@
 import type { InfraExecutionContext, InfraOwnedResource } from '@ankhorage/contracts/infra';
 
-import type { K3sClusterIdentity } from '../../../types/k3sRuntime';
+import type { K3sClusterIdentity } from '../../../types/k3sRuntime.js';
 
 /** Create ownership records for one k3s node. */
 export function createK3sNodeOwner(

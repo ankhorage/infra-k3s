@@ -1,7 +1,7 @@
 import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/infra';
 
-import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /** Validate topology, targets, credentials and control-plane prerequisites without mutation. */
 export async function validateK3sRuntimeAsync(

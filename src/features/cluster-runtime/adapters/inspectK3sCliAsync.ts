@@ -7,8 +7,8 @@ import type {
   K3sNodeAccess,
   K3sNodeCommandExecutor,
   K3sNodeObservation,
-} from '../../../types/k3sRuntime';
-import { inspectK3sNetworkingAsync } from './inspectK3sNetworkingAsync';
+} from '../../../types/k3sRuntime.js';
+import { inspectK3sNetworkingAsync } from './inspectK3sNetworkingAsync.js';
 import {
   commandFailed,
   invalidAccess,
@@ -16,7 +16,7 @@ import {
   K3S_BINARY,
   type K3sCliContext,
   success,
-} from './k3sCliSupport';
+} from './k3sCliSupport.js';
 
 /** Validate k3s node access and required host commands without mutating infrastructure. */
 export async function validateK3sCliAsync(

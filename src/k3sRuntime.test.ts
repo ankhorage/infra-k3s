@@ -5,8 +5,8 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { expect, it } from 'bun:test';
 
-import { createInfraAdapter } from './index';
-import { FakeK3sControlPlane } from './runtimeFixtures.test';
+import { createInfraAdapter } from './index.js';
+import { FakeK3sControlPlane } from './runtimeFixtures.test.js';
 
 it('plans and converges the complete local k3s lifecycle', async () => {
   const controlPlane = new FakeK3sControlPlane();
@@ -161,10 +161,14 @@ function createWorkload(persistent: boolean): InfraWorkloadSpec {
   return {
     id: 'api',
     artifact: { kind: 'image', image: 'registry.example/api@sha256:abc' },
-    ports: [{ name: 'http', port: 8080 }],
+    ports: { http: { port: 8080 } },
     exposure: 'public',
     ...(persistent
-      ? { persistence: [{ id: 'data', mountPath: '/data', sizeGiB: 1, retention: 'retain' }] }
+      ? {
+          persistence: {
+            data: { id: 'data', mountPath: '/data', sizeGiB: 1, retention: 'retain' },
+          },
+        }
       : {}),
   };
 }
@@ -191,8 +195,10 @@ function createContext(environment: 'local' | 'production'): InfraExecutionConte
           : { domain: 'api.sample.test' },
     },
     credentials: {
+      findAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
       resolveAsync: () =>
         Promise.resolve({ ok: true, value: { privateKey: 'private-key' }, diagnostics: [] }),
+      persistAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
     },
     secrets: {
       resolveAsync: () => Promise.resolve({ ok: true, value: 'secret', diagnostics: [] }),

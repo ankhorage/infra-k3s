@@ -6,9 +6,9 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { createKubernetesDriver } from '@ankhorage/kubernetes';
 
-import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime';
-import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime.js';
+import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /*** Remove workloads before k3s, retaining the cluster whenever persistent data survives. */
 export async function destroyK3sRuntimeAsync(

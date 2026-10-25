@@ -12,7 +12,7 @@ import type {
   K3sClusterSpec,
   K3sControlPlane,
   K3sNodeAccess,
-} from './index';
+} from './index.js';
 
 /** Generic in-memory boundary fixture for k3s and Kubernetes lifecycle acceptance. */
 export class FakeK3sControlPlane implements K3sControlPlane {

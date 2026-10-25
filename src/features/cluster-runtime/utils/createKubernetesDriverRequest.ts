@@ -1,7 +1,7 @@
 import type { InfraExecutionContext } from '@ankhorage/contracts/infra';
 import type { KubernetesDriverRequest } from '@ankhorage/kubernetes';
 
-import type { K3sDesiredState } from '../../../types/k3sRuntime';
+import type { K3sDesiredState } from '../../../types/k3sRuntime.js';
 
 /** Map k3s desired state to the shared Kubernetes driver boundary. */
 export function createKubernetesDriverRequest(

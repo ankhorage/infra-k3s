@@ -4,8 +4,12 @@ import type {
   K3sClusterObservation,
   K3sClusterSpec,
   K3sNodeAccess,
-} from '../../../types/k3sRuntime';
-import { inspectK3sCliAsync, isK3sInstalledAsync, versionMatchesAsync } from './inspectK3sCliAsync';
+} from '../../../types/k3sRuntime.js';
+import {
+  inspectK3sCliAsync,
+  isK3sInstalledAsync,
+  versionMatchesAsync,
+} from './inspectK3sCliAsync.js';
 import {
   commandFailed,
   delayAsync,
@@ -15,8 +19,8 @@ import {
   readinessTimeout,
   runNodeCommandAsync,
   success,
-} from './k3sCliSupport';
-import { reconcileK3sNetworkingAsync } from './reconcileK3sNetworkingAsync';
+} from './k3sCliSupport.js';
+import { reconcileK3sNetworkingAsync } from './reconcileK3sNetworkingAsync.js';
 
 /** Ensure the k3s cluster and reconcile runtime-owned networking configuration. */
 export async function ensureK3sCliAsync(

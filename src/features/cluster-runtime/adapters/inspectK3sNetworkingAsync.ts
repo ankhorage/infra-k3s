@@ -5,9 +5,9 @@ import type {
   K3sClusterSpec,
   K3sNetworkingObservation,
   K3sNodeAccess,
-} from '../../../types/k3sRuntime';
-import { createK3sTraefikConfigResource } from '../utils/createK3sTraefikConfigResource';
-import { commandFailed, K3S_BINARY, type K3sCliContext, success } from './k3sCliSupport';
+} from '../../../types/k3sRuntime.js';
+import { createK3sTraefikConfigResource } from '../utils/createK3sTraefikConfigResource.js';
+import { commandFailed, K3S_BINARY, type K3sCliContext, success } from './k3sCliSupport.js';
 
 const TRAEFIK_CONFIG_RESOURCE = 'helmchartconfig.helm.cattle.io/traefik';
 const TRAEFIK_NAMESPACE = 'kube-system';

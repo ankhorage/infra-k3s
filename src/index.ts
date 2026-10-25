@@ -1,8 +1,8 @@
 /** Public k3s runtime adapter package boundary. */
-export { infraAdapterDescriptor } from './constants/infra';
-export { createK3sCliControlPlane } from './features/cluster-runtime/adapters/createK3sCliControlPlane';
-export { createK3sNodeCommandExecutor } from './features/cluster-runtime/adapters/createK3sNodeCommandExecutor';
-export { createInfraAdapter } from './features/cluster-runtime/composition/createInfraAdapter';
+export { infraAdapterDescriptor } from './constants/infra.js';
+export { createK3sCliControlPlane } from './features/cluster-runtime/adapters/createK3sCliControlPlane.js';
+export { createK3sNodeCommandExecutor } from './features/cluster-runtime/adapters/createK3sNodeCommandExecutor.js';
+export { createInfraAdapter } from './features/cluster-runtime/composition/createInfraAdapter.js';
 export type {
   K3sAdapterOptions,
   K3sCliControlPlaneOptions,
@@ -18,4 +18,4 @@ export type {
   K3sNodeObservation,
   K3sNodeSpec,
   K3sTopology,
-} from './types/k3sRuntime';
+} from './types/k3sRuntime.js';

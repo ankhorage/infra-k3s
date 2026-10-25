@@ -1,6 +1,6 @@
 import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/infra';
 
-import type { K3sClusterIdentity } from '../../../types/k3sRuntime';
+import type { K3sClusterIdentity } from '../../../types/k3sRuntime.js';
 
 /** Resolve the active k3s identity from the canonical runtime selection. */
 export function getK3sClusterIdentity(

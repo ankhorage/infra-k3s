@@ -5,9 +5,9 @@ import type {
   K3sDesiredState,
   K3sNodeAccess,
   K3sRuntimeDependencies,
-} from '../../../../types/k3sRuntime';
-import { getK3sClusterSpec } from '../../utils/getK3sClusterSpec';
-import { resolveK3sNodeAccessAsync } from '../../utils/resolveK3sNodeAccessAsync';
+} from '../../../../types/k3sRuntime.js';
+import { getK3sClusterSpec } from '../../utils/getK3sClusterSpec.js';
+import { resolveK3sNodeAccessAsync } from '../../utils/resolveK3sNodeAccessAsync.js';
 
 interface PreparedK3sRuntime {
   readonly spec: K3sClusterSpec;

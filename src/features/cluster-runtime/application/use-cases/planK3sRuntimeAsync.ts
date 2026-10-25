@@ -11,10 +11,10 @@ import type {
   K3sDesiredState,
   K3sNodeObservation,
   K3sRuntimeDependencies,
-} from '../../../../types/k3sRuntime';
-import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners';
-import { createKubernetesDriverRequest } from '../../utils/createKubernetesDriverRequest';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+} from '../../../../types/k3sRuntime.js';
+import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners.js';
+import { createKubernetesDriverRequest } from '../../utils/createKubernetesDriverRequest.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /*** Plan k3s nodes, cluster and standard Kubernetes resources without mutation. */
 export async function planK3sRuntimeAsync(

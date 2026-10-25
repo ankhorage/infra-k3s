@@ -1,6 +1,6 @@
 import type { KubernetesResource } from '@ankhorage/kubernetes';
 
-import type { K3sClusterSpec } from '../../../types/k3sRuntime';
+import type { K3sClusterSpec } from '../../../types/k3sRuntime.js';
 
 const TRAEFIK_NAMESPACE = 'kube-system';
 const TRAEFIK_NAME = 'traefik';

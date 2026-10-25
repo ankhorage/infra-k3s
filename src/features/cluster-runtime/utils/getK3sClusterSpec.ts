@@ -1,7 +1,7 @@
 import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/infra';
 
-import type { K3sClusterSpec, K3sDesiredState, K3sTopology } from '../../../types/k3sRuntime';
-import { getK3sClusterIdentity } from './getK3sClusterIdentity';
+import type { K3sClusterSpec, K3sDesiredState, K3sTopology } from '../../../types/k3sRuntime.js';
+import { getK3sClusterIdentity } from './getK3sClusterIdentity.js';
 
 /** Validate portable targets and assign deterministic server and agent roles. */
 export function getK3sClusterSpec(
