@@ -1,5 +1,5 @@
 {
-  "name": "@ankhorage/k3s",
+  "name": "@ankhorage/infra-k3s",
   "version": "0.4.1",
   "description": "k3s runtime adapter for provider-neutral Ankhorage infrastructure.",
   "type": "module",
@@ -9,11 +9,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ankhorage/k3s.git"
+    "url": "git+https://github.com/ankhorage/infra-k3s.git"
   },
-  "homepage": "https://github.com/ankhorage/k3s#readme",
+  "homepage": "https://github.com/ankhorage/infra-k3s#readme",
   "bugs": {
-    "url": "https://github.com/ankhorage/k3s/issues"
+    "url": "https://github.com/ankhorage/infra-k3s/issues"
   },
   "keywords": [
     "ankhorage",
@@ -62,7 +62,7 @@
   "devDependencies": {
     "@ankhorage/devtools": "^1.14.6",
     "@ankhorage/paradox": "^0.1.24",
-    "@types/bun": "^1.4.1",
+    "@types/bun": "^1.4.2",
     "@types/node": "^26.4.1",
     "typescript": "~6.0.3"
   },

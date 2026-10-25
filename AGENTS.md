@@ -4,7 +4,7 @@
 
 ## Repository
 
-Package: `@ankhorage/k3s`
+Package: `@ankhorage/infra-k3s`
 
 k3s runtime adapter for provider-neutral Ankhorage infrastructure.
 
