@@ -1,5 +1,11 @@
 # @ankhorage/k3s
 
+## 0.4.2
+
+### Patch Changes
+
+- 3b5ca8f: Rename the k3s infrastructure adapter package.
+
 ## 0.4.1
 
 ### Patch Changes
