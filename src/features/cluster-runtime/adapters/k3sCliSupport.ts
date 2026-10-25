@@ -1,6 +1,6 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { K3sNodeAccess, K3sNodeCommandExecutor } from '../../../types/k3sRuntime';
+import type { K3sNodeAccess, K3sNodeCommandExecutor } from '../../../types/k3sRuntime.js';
 
 const K3S_INSTALL_URL = 'https://get.k3s.io';
 export const K3S_BINARY = '/usr/local/bin/k3s';

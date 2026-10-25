@@ -1,8 +1,8 @@
 import { INFRA_ADAPTER_CATALOG, isInfraAdapterDescriptor } from '@ankhorage/contracts/infra';
 import { describe, expect, it } from 'bun:test';
 
-import { createInfraAdapter, infraAdapterDescriptor } from './index';
-import { FakeK3sControlPlane } from './runtimeFixtures.test';
+import { createInfraAdapter, infraAdapterDescriptor } from './index.js';
+import { FakeK3sControlPlane } from './runtimeFixtures.test.js';
 
 describe('k3s runtime adapter', () => {
   it('exports the exact Contracts catalog descriptor', () => {

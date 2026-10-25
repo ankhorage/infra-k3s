@@ -8,7 +8,7 @@ import type {
   K3sNodeCommandExecutor,
   K3sNodeCommandRequest,
   K3sNodeCommandResult,
-} from '../../../types/k3sRuntime';
+} from '../../../types/k3sRuntime.js';
 
 /** Create the shell-free local and host-key-pinned SSH execution boundary. */
 export function createK3sNodeCommandExecutor(): K3sNodeCommandExecutor {

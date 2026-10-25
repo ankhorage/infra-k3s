@@ -1,19 +1,19 @@
-import type { K3sCliControlPlaneOptions, K3sControlPlane } from '../../../types/k3sRuntime';
-import { createK3sNodeCommandExecutor } from './createK3sNodeCommandExecutor';
-import { inspectK3sCliAsync, validateK3sCliAsync } from './inspectK3sCliAsync';
+import type { K3sCliControlPlaneOptions, K3sControlPlane } from '../../../types/k3sRuntime.js';
+import { createK3sNodeCommandExecutor } from './createK3sNodeCommandExecutor.js';
+import { inspectK3sCliAsync, validateK3sCliAsync } from './inspectK3sCliAsync.js';
 import {
   assertNonNegativeInteger,
   assertPositiveInteger,
   type K3sCliContext,
   loadOfficialInstallScriptAsync,
-} from './k3sCliSupport';
+} from './k3sCliSupport.js';
 import {
   destroyK3sCliAsync,
   ensureK3sCliAsync,
   loadK3sImagesAsync,
   suspendK3sCliAsync,
   waitForK3sCliAsync,
-} from './operateK3sCliAsync';
+} from './operateK3sCliAsync.js';
 
 /** Create the concrete stateless k3s control plane for local Linux and verified SSH targets. */
 export function createK3sCliControlPlane(options: K3sCliControlPlaneOptions = {}): K3sControlPlane {

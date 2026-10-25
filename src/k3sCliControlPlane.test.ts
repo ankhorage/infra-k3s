@@ -1,14 +1,14 @@
 import type { InfraComputeTarget } from '@ankhorage/contracts/infra';
 import { expect, it } from 'bun:test';
 
-import { createK3sCliControlPlane } from './features/cluster-runtime/adapters/createK3sCliControlPlane';
+import { createK3sCliControlPlane } from './features/cluster-runtime/adapters/createK3sCliControlPlane.js';
 import type {
   K3sClusterSpec,
   K3sNodeAccess,
   K3sNodeCommandExecutor,
   K3sNodeCommandRequest,
   K3sNodeCommandResult,
-} from './index';
+} from './index.js';
 
 it('runs the concrete single-node lifecycle and resumes without downloading again', async () => {
   const executor = new RecordingExecutor();

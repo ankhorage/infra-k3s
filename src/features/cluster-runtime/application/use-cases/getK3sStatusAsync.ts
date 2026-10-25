@@ -5,9 +5,9 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { createKubernetesDriver } from '@ankhorage/kubernetes';
 
-import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime';
-import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime.js';
+import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /*** Aggregate k3s node, cluster and owned Kubernetes workload status. */
 export async function getK3sStatusAsync(

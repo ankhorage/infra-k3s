@@ -6,10 +6,10 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { createKubernetesDriver } from '@ankhorage/kubernetes';
 
-import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime';
-import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners';
-import { createKubernetesDriverRequest } from '../../utils/createKubernetesDriverRequest';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime.js';
+import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners.js';
+import { createKubernetesDriverRequest } from '../../utils/createKubernetesDriverRequest.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /*** Bootstrap k3s, reconcile workloads through Kubernetes and wait for readiness. */
 export async function ensureK3sRuntimeAsync(

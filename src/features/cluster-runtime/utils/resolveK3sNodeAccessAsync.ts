@@ -1,6 +1,6 @@
 import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/infra';
 
-import type { K3sClusterSpec, K3sNodeAccess } from '../../../types/k3sRuntime';
+import type { K3sClusterSpec, K3sNodeAccess } from '../../../types/k3sRuntime.js';
 
 /** Resolve SSH bootstrap credentials at execution time without returning them as lifecycle state. */
 export async function resolveK3sNodeAccessAsync(

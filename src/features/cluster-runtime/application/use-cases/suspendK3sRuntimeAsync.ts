@@ -4,9 +4,9 @@ import type {
   InfraResult,
 } from '@ankhorage/contracts/infra';
 
-import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime';
-import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners';
-import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync';
+import type { K3sDesiredState, K3sRuntimeDependencies } from '../../../../types/k3sRuntime.js';
+import { createK3sClusterOwner, createK3sNodeOwner } from '../../utils/createK3sOwners.js';
+import { prepareK3sRuntimeAsync } from './prepareK3sRuntimeAsync.js';
 
 /*** Stop k3s nodes while preserving the cluster and persistent workload data. */
 export async function suspendK3sRuntimeAsync(

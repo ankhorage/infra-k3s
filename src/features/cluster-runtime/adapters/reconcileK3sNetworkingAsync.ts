@@ -1,10 +1,10 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 import type { KubernetesResource } from '@ankhorage/kubernetes';
 
-import type { K3sClusterSpec, K3sNodeAccess } from '../../../types/k3sRuntime';
-import { createK3sTraefikConfigResource } from '../utils/createK3sTraefikConfigResource';
-import { inspectK3sNetworkingAsync } from './inspectK3sNetworkingAsync';
-import { K3S_BINARY, type K3sCliContext, runNodeCommandAsync, success } from './k3sCliSupport';
+import type { K3sClusterSpec, K3sNodeAccess } from '../../../types/k3sRuntime.js';
+import { createK3sTraefikConfigResource } from '../utils/createK3sTraefikConfigResource.js';
+import { inspectK3sNetworkingAsync } from './inspectK3sNetworkingAsync.js';
+import { K3S_BINARY, type K3sCliContext, runNodeCommandAsync, success } from './k3sCliSupport.js';
 
 const TRAEFIK_CONFIG_RESOURCE = 'helmchartconfig.helm.cattle.io/traefik';
 const TRAEFIK_NAMESPACE = 'kube-system';

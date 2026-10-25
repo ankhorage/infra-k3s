@@ -1,15 +1,15 @@
 import { expect, it } from 'bun:test';
 
-import type { K3sCliContext } from './features/cluster-runtime/adapters/k3sCliSupport';
-import { reconcileK3sNetworkingAsync } from './features/cluster-runtime/adapters/reconcileK3sNetworkingAsync';
-import { createK3sTraefikConfigResource } from './features/cluster-runtime/utils/createK3sTraefikConfigResource';
+import type { K3sCliContext } from './features/cluster-runtime/adapters/k3sCliSupport.js';
+import { reconcileK3sNetworkingAsync } from './features/cluster-runtime/adapters/reconcileK3sNetworkingAsync.js';
+import { createK3sTraefikConfigResource } from './features/cluster-runtime/utils/createK3sTraefikConfigResource.js';
 import type {
   K3sClusterSpec,
   K3sNodeAccess,
   K3sNodeCommandExecutor,
   K3sNodeCommandRequest,
   K3sNodeCommandResult,
-} from './types/k3sRuntime';
+} from './types/k3sRuntime.js';
 
 it('applies owned Traefik ACME configuration and waits for Traefik readiness', async () => {
   const executor = new NetworkingExecutor();
