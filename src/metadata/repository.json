@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "adapter",
+  "title": "Ankhorage k3s Infrastructure",
+  "summary": "Adapts portable infrastructure intent to k3s clusters on local Linux or host-key-pinned SSH nodes.",
+  "purpose": "Provide a standalone k3s runtime adapter while delegating standard Kubernetes workload behavior to the shared Kubernetes driver.",
+  "domain": "k3s runtime infrastructure",
+  "responsibilities": [
+    "Bootstrap and operate k3s on supported local or SSH-connected nodes.",
+    "Compose the shared Kubernetes driver for standard workload projection and reconciliation.",
+    "Reconcile Infra-owned Traefik ACME HTTP-01 configuration without replacing foreign Traefik settings."
+  ],
+  "boundaries": [
+    "Does not define portable infrastructure contracts.",
+    "Does not duplicate standard Kubernetes workload projection owned by @ankhorage/kubernetes.",
+    "Does not provide general-purpose SSH orchestration or manage non-k3s clusters."
+  ],
+  "audience": [
+    "Infrastructure hosts selecting k3s as a runtime target.",
+    "Operators deploying portable workloads to supported k3s nodes."
+  ],
+  "useCases": [
+    "Bootstrap a k3s node through the official installer.",
+    "Deploy and reconcile a portable workload on k3s.",
+    "Configure Infra-owned Traefik ACME HTTP-01 intent on the cluster."
+  ],
+  "architecture": {
+    "role": "An infrastructure runtime adapter that composes k3s control-plane behavior with the shared Kubernetes driver.",
+    "invariants": [
+      "Standard Kubernetes workload behavior is delegated to the published Kubernetes package.",
+      "Remote nodes require host-key-pinned SSH access.",
+      "Foreign Traefik configuration is not overwritten."
+    ]
+  },
+  "implements": [
+    {
+      "packageName": "@ankhorage/contracts",
+      "subpath": "./infra",
+      "interfaceId": "InfraRuntimeAdapter"
+    }
+  ],
+  "constraints": {
+    "platforms": ["Linux hosts supported by k3s", "SSH-accessible Linux nodes"],
+    "security": ["Remote bootstrap requires host-key-pinned SSH access."],
+    "limitations": ["Only the k3s runtime is implemented."]
+  }
+}
