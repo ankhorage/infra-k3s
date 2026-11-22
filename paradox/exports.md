@@ -57,10 +57,10 @@ Source: `src/types/k3sRuntime.ts:11:1`
 
 ### Members
 
-| Name         | Kind     | Type                                     | Required | Description |
-| ------------ | -------- | ---------------------------------------- | -------- | ----------- |
-| cli          | property | `K3sCliControlPlaneOptions \| undefined` | no       |             |
-| controlPlane | property | `K3sControlPlane \| undefined`           | no       |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| cli | property | `K3sCliControlPlaneOptions \| undefined` | no |  |
+| controlPlane | property | `K3sControlPlane \| undefined` | no |  |
 
 ## K3sCliControlPlaneOptions
 
@@ -70,12 +70,12 @@ Source: `src/types/k3sRuntime.ts:39:1`
 
 ### Members
 
-| Name                    | Kind     | Type                                                       | Required | Description |
-| ----------------------- | -------- | ---------------------------------------------------------- | -------- | ----------- |
-| executor                | property | `K3sNodeCommandExecutor \| undefined`                      | no       |             |
-| installScriptLoader     | property | `((signal?: AbortSignal) => Promise<string>) \| undefined` | no       |             |
-| pollIntervalMs          | property | `number \| undefined`                                      | no       |             |
-| readinessTimeoutSeconds | property | `number \| undefined`                                      | no       |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| executor | property | `K3sNodeCommandExecutor \| undefined` | no |  |
+| installScriptLoader | property | `((signal?: AbortSignal) => Promise<string>) \| undefined` | no |  |
+| pollIntervalMs | property | `number \| undefined` | no |  |
+| readinessTimeoutSeconds | property | `number \| undefined` | no |  |
 
 ## K3sClusterIdentity
 
@@ -85,11 +85,11 @@ Source: `src/types/k3sRuntime.ts:46:1`
 
 ### Members
 
-| Name        | Kind     | Type                                   | Required | Description |
-| ----------- | -------- | -------------------------------------- | -------- | ----------- |
-| environment | property | `"local" \| "preview" \| "production"` | yes      |             |
-| name        | property | `string`                               | yes      |             |
-| projectId   | property | `string`                               | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| environment | property | `"local" \| "preview" \| "production"` | yes |  |
+| name | property | `string` | yes |  |
+| projectId | property | `string` | yes |  |
 
 ## K3sClusterObservation
 
@@ -99,13 +99,13 @@ Source: `src/types/k3sRuntime.ts:77:1`
 
 ### Members
 
-| Name                 | Kind     | Type                                                                                                 | Required | Description |
-| -------------------- | -------- | ---------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| api                  | property | `KubernetesApi \| undefined`                                                                         | no       |             |
-| configurationMatches | property | `boolean`                                                                                            | yes      |             |
-| detail               | property | `string \| undefined`                                                                                | no       |             |
-| nodes                | property | `readonly K3sNodeObservation[]`                                                                      | yes      |             |
-| state                | property | `"absent" \| "pending" \| "ready" \| "degraded" \| "stopped" \| "retained" \| "failed" \| "unknown"` | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| api | property | `KubernetesApi \| undefined` | no |  |
+| configurationMatches | property | `boolean` | yes |  |
+| detail | property | `string \| undefined` | no |  |
+| nodes | property | `readonly K3sNodeObservation[]` | yes |  |
+| state | property | `"absent" \| "pending" \| "ready" \| "degraded" \| "stopped" \| "retained" \| "failed" \| "unknown"` | yes |  |
 
 ## K3sClusterSpec
 
@@ -115,15 +115,15 @@ Source: `src/types/k3sRuntime.ts:63:1`
 
 ### Members
 
-| Name        | Kind     | Type                                   | Required | Description |
-| ----------- | -------- | -------------------------------------- | -------- | ----------- |
-| environment | property | `"local" \| "preview" \| "production"` | yes      |             |
-| name        | property | `string`                               | yes      |             |
-| networking  | property | `InfraNetworkingSpec \| undefined`     | no       |             |
-| nodes       | property | `readonly K3sNodeSpec[]`               | yes      |             |
-| projectId   | property | `string`                               | yes      |             |
-| topology    | property | `K3sTopology`                          | yes      |             |
-| version     | property | `string \| undefined`                  | no       |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| environment | property | `"local" \| "preview" \| "production"` | yes |  |
+| name | property | `string` | yes |  |
+| networking | property | `InfraNetworkingSpec \| undefined` | no |  |
+| nodes | property | `readonly K3sNodeSpec[]` | yes |  |
+| projectId | property | `string` | yes |  |
+| topology | property | `K3sTopology` | yes |  |
+| version | property | `string \| undefined` | no |  |
 
 ## K3sControlPlane
 
@@ -133,15 +133,15 @@ Source: `src/types/k3sRuntime.ts:109:1`
 
 ### Members
 
-| Name                | Kind   | Type                                                                                                                                      | Required | Description |
-| ------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| destroyAsync        | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>`                            | yes      |             |
-| ensureAsync         | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>`           | yes      |             |
-| inspectAsync        | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>`           | yes      |             |
-| loadImagesAsync     | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], images: readonly string[], signal?: AbortSignal) => Promise<InfraResult<null>>` | yes      |             |
-| suspendAsync        | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>`                            | yes      |             |
-| validateAsync       | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>`                            | yes      |             |
-| waitUntilReadyAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>`           | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| destroyAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>` | yes |  |
+| ensureAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>` | yes |  |
+| inspectAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>` | yes |  |
+| loadImagesAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], images: readonly string[], signal?: AbortSignal) => Promise<InfraResult<null>>` | yes |  |
+| suspendAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>` | yes |  |
+| validateAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<null>>` | yes |  |
+| waitUntilReadyAsync | method | `(spec: K3sClusterSpec, access: readonly K3sNodeAccess[], signal?: AbortSignal) => Promise<InfraResult<K3sClusterObservation>>` | yes |  |
 
 ## K3sDesiredState
 
@@ -163,9 +163,9 @@ Source: `src/types/k3sRuntime.ts:35:1`
 
 ### Members
 
-| Name     | Kind   | Type                                                                                       | Required | Description |
-| -------- | ------ | ------------------------------------------------------------------------------------------ | -------- | ----------- |
-| runAsync | method | `(access: K3sNodeAccess, request: K3sNodeCommandRequest) => Promise<K3sNodeCommandResult>` | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| runAsync | method | `(access: K3sNodeAccess, request: K3sNodeCommandRequest) => Promise<K3sNodeCommandResult>` | yes |  |
 
 ## K3sNodeCommandRequest
 
@@ -175,13 +175,13 @@ Source: `src/types/k3sRuntime.ts:20:1`
 
 ### Members
 
-| Name        | Kind     | Type                                            | Required | Description |
-| ----------- | -------- | ----------------------------------------------- | -------- | ----------- |
-| arguments   | property | `readonly string[]`                             | yes      |             |
-| environment | property | `Readonly<Record<string, string>> \| undefined` | no       |             |
-| executable  | property | `string`                                        | yes      |             |
-| signal      | property | `AbortSignal \| undefined`                      | no       |             |
-| stdin       | property | `string \| undefined`                           | no       |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| arguments | property | `readonly string[]` | yes |  |
+| environment | property | `Readonly<Record<string, string>> \| undefined` | no |  |
+| executable | property | `string` | yes |  |
+| signal | property | `AbortSignal \| undefined` | no |  |
+| stdin | property | `string \| undefined` | no |  |
 
 ## K3sNodeCommandResult
 
@@ -191,11 +191,11 @@ Source: `src/types/k3sRuntime.ts:28:1`
 
 ### Members
 
-| Name     | Kind     | Type     | Required | Description |
-| -------- | -------- | -------- | -------- | ----------- |
-| exitCode | property | `number` | yes      |             |
-| stderr   | property | `string` | yes      |             |
-| stdout   | property | `string` | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| exitCode | property | `number` | yes |  |
+| stderr | property | `string` | yes |  |
+| stdout | property | `string` | yes |  |
 
 ## K3sNodeObservation
 
@@ -205,12 +205,12 @@ Source: `src/types/k3sRuntime.ts:70:1`
 
 ### Members
 
-| Name                 | Kind     | Type                                                                                                 | Required | Description |
-| -------------------- | -------- | ---------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| configurationMatches | property | `boolean`                                                                                            | yes      |             |
-| detail               | property | `string \| undefined`                                                                                | no       |             |
-| id                   | property | `string`                                                                                             | yes      |             |
-| state                | property | `"absent" \| "pending" \| "ready" \| "degraded" \| "stopped" \| "retained" \| "failed" \| "unknown"` | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| configurationMatches | property | `boolean` | yes |  |
+| detail | property | `string \| undefined` | no |  |
+| id | property | `string` | yes |  |
+| state | property | `"absent" \| "pending" \| "ready" \| "degraded" \| "stopped" \| "retained" \| "failed" \| "unknown"` | yes |  |
 
 ## K3sNodeSpec
 
@@ -220,11 +220,11 @@ Source: `src/types/k3sRuntime.ts:57:1`
 
 ### Members
 
-| Name   | Kind     | Type                  | Required | Description |
-| ------ | -------- | --------------------- | -------- | ----------- |
-| id     | property | `string`              | yes      |             |
-| role   | property | `"server" \| "agent"` | yes      |             |
-| target | property | `InfraComputeTarget`  | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| id | property | `string` | yes |  |
+| role | property | `"server" \| "agent"` | yes |  |
+| target | property | `InfraComputeTarget` | yes |  |
 
 ## K3sTopology
 
@@ -234,7 +234,7 @@ Source: `src/types/k3sRuntime.ts:52:1`
 
 ### Members
 
-| Name    | Kind     | Type     | Required | Description |
-| ------- | -------- | -------- | -------- | ----------- |
-| agents  | property | `number` | yes      |             |
-| servers | property | `number` | yes      |             |
+| Name | Kind | Type | Required | Description |
+| --- | --- | --- | --- | --- |
+| agents | property | `number` | yes |  |
+| servers | property | `number` | yes |  |

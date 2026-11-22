@@ -1,5 +1,11 @@
 # @ankhorage/k3s
 
+## 0.4.5
+
+### Patch Changes
+
+- 8d472dc: Update canonical Devtools CI ownership and published dependencies.
+
 ## 0.4.4
 
 ### Patch Changes

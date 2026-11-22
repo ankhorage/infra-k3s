@@ -1,9 +1,11 @@
 [
   {
     "name": "createInfraAdapter",
+    "title": null,
     "description": "Create the canonical k3s runtime adapter entrypoint.\n\nThe default composition bootstraps local Linux or host-key-pinned SSH nodes through the official\nk3s installer. Standard workload projection and reconciliation are delegated to the published\nKubernetes driver. Canonical `networking.tls` ACME HTTP-01 intent is reconciled through an\nInfra-owned Traefik HelmChartConfig without overwriting foreign Traefik configuration. Tests and\nspecialized hosts may inject the control-plane boundary.",
     "isReadme": true,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/features/cluster-runtime/composition/createInfraAdapter.ts",
     "sourceLocation": {
@@ -11,8 +13,12 @@
       "line": 24,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sAdapterOptions"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sAdapterOptions"
+    ],
     "signatures": [
       {
         "label": "(options?: K3sAdapterOptions) => InfraRuntimeAdapter<\"k3s\">",
@@ -33,9 +39,11 @@
   },
   {
     "name": "createK3sCliControlPlane",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/features/cluster-runtime/adapters/createK3sCliControlPlane.ts",
     "sourceLocation": {
@@ -43,8 +51,13 @@
       "line": 19,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sCliControlPlaneOptions", "K3sControlPlane"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sCliControlPlaneOptions",
+      "K3sControlPlane"
+    ],
     "signatures": [
       {
         "label": "(options?: K3sCliControlPlaneOptions) => K3sControlPlane",
@@ -65,9 +78,11 @@
   },
   {
     "name": "createK3sNodeCommandExecutor",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "function",
     "modulePath": "src/features/cluster-runtime/adapters/createK3sNodeCommandExecutor.ts",
     "sourceLocation": {
@@ -75,8 +90,12 @@
       "line": 14,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sNodeCommandExecutor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sNodeCommandExecutor"
+    ],
     "signatures": [
       {
         "label": "() => K3sNodeCommandExecutor",
@@ -90,9 +109,11 @@
   },
   {
     "name": "infraAdapterDescriptor",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "value",
     "modulePath": "src/constants/infra.ts",
     "sourceLocation": {
@@ -100,7 +121,9 @@
       "line": 5,
       "column": 14
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -108,9 +131,11 @@
   },
   {
     "name": "K3sAdapterOptions",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -118,8 +143,13 @@
       "line": 11,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sCliControlPlaneOptions", "K3sControlPlane"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sCliControlPlaneOptions",
+      "K3sControlPlane"
+    ],
     "signatures": [],
     "members": [
       {
@@ -141,9 +171,11 @@
   },
   {
     "name": "K3sCliControlPlaneOptions",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -151,8 +183,12 @@
       "line": 39,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sNodeCommandExecutor"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sNodeCommandExecutor"
+    ],
     "signatures": [],
     "members": [
       {
@@ -188,9 +224,11 @@
   },
   {
     "name": "K3sClusterIdentity",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -198,7 +236,9 @@
       "line": 46,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -228,9 +268,11 @@
   },
   {
     "name": "K3sClusterObservation",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -238,8 +280,12 @@
       "line": 77,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sNodeObservation"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sNodeObservation"
+    ],
     "signatures": [],
     "members": [
       {
@@ -282,9 +328,11 @@
   },
   {
     "name": "K3sClusterSpec",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -292,8 +340,13 @@
       "line": 63,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sNodeSpec", "K3sTopology"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sNodeSpec",
+      "K3sTopology"
+    ],
     "signatures": [],
     "members": [
       {
@@ -350,9 +403,11 @@
   },
   {
     "name": "K3sControlPlane",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -360,8 +415,14 @@
       "line": 109,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sClusterObservation", "K3sClusterSpec", "K3sNodeAccess"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sClusterObservation",
+      "K3sClusterSpec",
+      "K3sNodeAccess"
+    ],
     "signatures": [],
     "members": [
       {
@@ -418,9 +479,11 @@
   },
   {
     "name": "K3sDesiredState",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -428,7 +491,9 @@
       "line": 148,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -436,9 +501,11 @@
   },
   {
     "name": "K3sNodeAccess",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "unknown",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -446,7 +513,9 @@
       "line": 91,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [],
@@ -454,9 +523,11 @@
   },
   {
     "name": "K3sNodeCommandExecutor",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -464,8 +535,14 @@
       "line": 35,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
-    "relatedSymbols": ["K3sNodeAccess", "K3sNodeCommandRequest", "K3sNodeCommandResult"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
+    "relatedSymbols": [
+      "K3sNodeAccess",
+      "K3sNodeCommandRequest",
+      "K3sNodeCommandResult"
+    ],
     "signatures": [],
     "members": [
       {
@@ -480,9 +557,11 @@
   },
   {
     "name": "K3sNodeCommandRequest",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -490,7 +569,9 @@
       "line": 20,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -534,9 +615,11 @@
   },
   {
     "name": "K3sNodeCommandResult",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -544,7 +627,9 @@
       "line": 28,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -574,9 +659,11 @@
   },
   {
     "name": "K3sNodeObservation",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -584,7 +671,9 @@
       "line": 70,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -621,9 +710,11 @@
   },
   {
     "name": "K3sNodeSpec",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -631,7 +722,9 @@
       "line": 57,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
@@ -661,9 +754,11 @@
   },
   {
     "name": "K3sTopology",
+    "title": null,
     "description": null,
     "isReadme": false,
-    "examples": [],
+    "see": [],
+    "security": [],
     "kind": "type",
     "modulePath": "src/types/k3sRuntime.ts",
     "sourceLocation": {
@@ -671,7 +766,9 @@
       "line": 52,
       "column": 1
     },
-    "exportPaths": ["src/index.ts"],
+    "exportPaths": [
+      "src/index.ts"
+    ],
     "relatedSymbols": [],
     "signatures": [],
     "members": [
